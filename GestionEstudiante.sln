@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionEstudianteEva3.AppMovil", "GestionEstudianteEva3.AppMovil\GestionEstudianteEva3.AppMovil.csproj", "{CC90FAB6-6FE4-44B8-85BD-DBD341845A6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionEstudianteEva3.modelos", "GestionEstudianteEva3.modelos\GestionEstudianteEva3.modelos.csproj", "{A8B5674E-F56B-4036-AC37-FDEB57B1A9AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC90FAB6-6FE4-44B8-85BD-DBD341845A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC90FAB6-6FE4-44B8-85BD-DBD341845A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC90FAB6-6FE4-44B8-85BD-DBD341845A6F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CC90FAB6-6FE4-44B8-85BD-DBD341845A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC90FAB6-6FE4-44B8-85BD-DBD341845A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC90FAB6-6FE4-44B8-85BD-DBD341845A6F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A8B5674E-F56B-4036-AC37-FDEB57B1A9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B5674E-F56B-4036-AC37-FDEB57B1A9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B5674E-F56B-4036-AC37-FDEB57B1A9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B5674E-F56B-4036-AC37-FDEB57B1A9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5A73B5B-3881-423C-BA05-24528A99809A}
+	EndGlobalSection
+EndGlobal

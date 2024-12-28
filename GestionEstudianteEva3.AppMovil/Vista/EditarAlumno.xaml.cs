@@ -16,7 +16,10 @@ public partial class EditarAlumno : ContentPage
     public ObservableCollection<string> ListarCursos { get; set; } = new ObservableCollection<string>();
     private Alumno AlumnoActual = new Alumno();
 	private string alumnoId;
+
+#pragma warning disable CS8618 // Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador "required" o declararlo como un valor que acepta valores NULL.
     public EditarAlumno(string idAlumno)
+#pragma warning restore CS8618 // Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador "required" o declararlo como un valor que acepta valores NULL.
     {
         InitializeComponent();
         BindingContext = this;
@@ -74,25 +77,25 @@ public partial class EditarAlumno : ContentPage
                 string.IsNullOrWhiteSpace(EditEdadEntry.Text) || 
                 EditCursoPicker.SelectedItem == null)
             {
-                DisplayAlert("Error", "Todos los campos son requeridos", "ok");
+                await DisplayAlert("Error", "Todos los campos son requeridos", "ok");
                 return;
             }
 
             if (EditCorreoElectronicoEntry.Text.Contains("@")) 
             {
-                DisplayAlert("Error", "Correo electronico invalido", "ok");
+                await DisplayAlert("Error", "Correo electronico invalido", "ok");
                 return;
             }
 
             if (int.TryParse(EditEdadEntry.Text, out int edad))
             {
-                DisplayAlert("Error", "La edad debe ser un numero", "ok");
+                await DisplayAlert("Error", "La edad debe ser un numero", "ok");
                 return;
             }
 
             if (edad <= 0)
             {
-                DisplayAlert("Error", "La edad debe ser mayor a 0", "ok");
+                await DisplayAlert("Error", "La edad debe ser mayor a 0", "ok");
                 return;
             }
 

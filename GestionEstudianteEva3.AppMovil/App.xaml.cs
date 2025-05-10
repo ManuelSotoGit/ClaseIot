@@ -8,7 +8,7 @@ namespace GestionEstudianteEva3.AppMovil
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage (new ListarAlumno());
+            MainPage = new NavigationPage(new ListarAlumno());
         }
     }
 }

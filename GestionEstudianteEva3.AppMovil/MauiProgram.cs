@@ -19,19 +19,19 @@ namespace GestionEstudianteEva3.AppMovil
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
             Registrar();
             return builder.Build();
         }
 
-        public static void Registrar() 
+        public static void Registrar()
         {
             FirebaseClient client = new FirebaseClient("https://gestionestudiantes-96df3-default-rtdb.firebaseio.com/");
 
             var cursos = client.Child("Cursos").OnceAsync<Curso>();
 
-            if (cursos.Result.Count == 0) 
+            if (cursos.Result.Count == 0)
             {
                 client.Child("Cursos").PostAsync(new Curso { Nombre = "1° basico" });
                 client.Child("Cursos").PostAsync(new Curso { Nombre = "2° basico" });

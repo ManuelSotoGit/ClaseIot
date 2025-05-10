@@ -14,16 +14,19 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
+                
                 <SearchBar Placeholder="Buscar..."
                            x:Name="filtroSerchBar"
                            Grid.Row="0"
                            Grid.Column="0"
                            TextChanged="filtroSerchBar_TextChanged"/>
+                
                 <Button Text="Nuevo Alumno"
                         x:Name="nuevoAlumnoBoton"
                         Grid.Row="0"
                         Grid.Column="1"
                         Clicked="nuevoAlumnoBoton_Clicked"/>
+
             <CollectionView x:Name="ListaCollection"
                                 ItemsSource="{Binding Lista}"
                                 Grid.Row="1"
@@ -37,6 +40,8 @@
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Image Grid.RowSpan="2"
@@ -51,13 +56,30 @@
                             <Label Grid.Column="1"
                                    Grid.Row="1"
                                    Text="{Binding Curso.Nombre}"/>
+                            <ImageButton x:Name="editarButton"
+                                         Grid.Column="2"
+                                         Source="edit_icon.png"
+                                         Background="Transparent"
+                                         HeightRequest="25"
+                                         WidthRequest="25"
+                                         CommandParameter="{Binding .}"
+                                         Clicked="editarButton_Clicked"/>
+                            <ImageButton x:Name="eliminarButton"
+                                         Grid.Column="3"
+                                         Grid.Row="1"
+                                         Source="eli_icon.png"
+                                         Background="Transparent"
+                                         HeightRequest="25"
+                                         WidthRequest="25"
+                                         CommandParameter="{Binding .}"
+                                         Clicked="eliminarButton_Clicked"/>
 
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-                
-            </CollectionView>
 
+            </CollectionView>
+                
         </Grid>
         </ScrollView>
 </ContentPage>
